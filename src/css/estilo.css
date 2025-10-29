@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "roboto flex";
+}
+
+.logo{
+    max-width: 75px;
+}
+
+.cabecalho{
+    background-color: black;
+    padding: 20px;
+}
+
+.cabecalho-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-menu{
+    list-style: none;
+    display: flex;
+}
+
+.cabecalho-menu li{
+    margin-left: 20px;
+}
+
+.cabecalho-menu a{
+    color: white;
+    text-decoration: none;
+}
+
+.banner{
+    background-image: url(../assets/Game6.jpg);
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.banner-overlay{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    /* garante que a camada de sobreposição fique sob a imagem */
+    z-index: 1;
+}
+
+/* pseudo elements executa uma ação antes */
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    /* garante que a camada de sobreposição fique sob a imagem */
+    z-index: 1;
+}
+
+.banner-conteudo{
+    width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-titulo {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner-descricao{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.banner-btn{
+    background: #e50914;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin: 0 10px;
+    transition: 0.25s;
+}
+
+.banner-btn:hover{
+    box-shadow: 5px 5px 8px black;
+    background: white;
+    color: #e50914;
+    transition: 0.25s;
+    /* transform: rotate(360deg);
+    transform: translateX(5px); */
+    transform: scale(105%);
+}
+
+.sessao-filmes{
+    padding: 20px;
+}
+
+.filme-titulo{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.carrossel{
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.carrossel-lista{
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+}
+
+.carrossel-item{
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carrossel-item h1{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.carrossel-item h3{
+    font-size: 15px;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.btn-carrossel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-anterior{
+    left: 0;
+}
+
+.btn-proximo{
+    right: 0;
+}
+
+footer{
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* perfis */
+header{
+    width: 100%;
+    height: 70px;
+    background: #1A1D1F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; /* controla o espaçamento */
+}
+
+#logo{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 20px;
+    background: #F2A341;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+/* seção de perfis */
+#perfil{
+    width: 100%;
+    min-height: 555px; /* min height para flexibilidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    padding: 20px 0;
+}
+
+.perfis-container{
+    width: 90%;
+    max-width: 900px; /* define um máximo pra nao quebrar tudo em tela grande */
+    display: flex; /* faz os bagulho quebrar pra proxima linha */
+    flex-wrap: wrap; /* centraliza */
+    gap: 20px; /* espaçamento entre perfis */
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.perfil-card h3{
+    color: #FFF;
+    font-size: 20px;
+    margin-top: 10px; /* espaçamento entre imagem e nome */
+    max-width: 120px;
+    
+}
+
+.perfil-img{
+    width: 120px;
+    height: 120px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    object-fit: cover; /* Recorta a imagem para preencher o contâiner sem distorcer */
+}
+
+/* Conteúdo */
+
+/* secoes de conteudo */
+#titulo{
+    background-color: #1A1D1F;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px; /* compensa a altura do cabeçalho fixo */
+}
+
+#titulo img{
+    width: 400px;
+    height: 300px;
+    margin-top: -45px;
+}
+
+#historia{
+    width: 100%;
+    min-height: 600px; /* Use min-height para seções com conteúdo variável */
+    background:#808080;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0; /* adiciona espaçamento interno */
+}
+
+#texto-historia{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#texto-historia h1{
+    color:rgb(37, 37, 116);
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#texto-historia p{
+    font-size: 17px;
+    color:#1A1D1F /* para contraste */
+}
+
+#imagens-historia{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.historia-personagem{
+    width: 100%;
+    min-height: 555px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background:#1A1D1F;
+    padding: 20px;
+}
+
+.historia-personagem p{
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+}
+
+.historia-personagem h1{
+    color:rgb(37, 37, 116);
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.historia-personagem h3{
+    color: #4C8755;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.historia-personagem img{
+    width: 230px;
+    height: 290px;
+}
+
+.imagem-personagem1, .imagem-personagem2{
+    width: 230;
+    height: 290;
+    border: 2px solid #ccc; /* ajuste a cor da borda */
+}
+
+#melhores-momentos{
+    width: 100%;
+    background-color: #1A1D1F;
+    display: flex;
+    flex-direction: column; /* altera para coluna para o título ficar acima dos vídeos */
+    align-items: center;
+    padding: 40px 0;
+}
+
+#melhores-momentos h1{
+    color: rgb(197, 6, 6);
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px; /* espaçamento após o título */
+}
+
+.videos-momentos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.videos-momentos{
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+.videos-momentos video{
+    width: 100%;
+    height: 100%;
+}
+
+#episodio-completo{
+    width: 100%;
+    height: 150px;
+    background-color: #143440; /* cor de fundo para a seção */
+    display: grid;
+    place-items: center;
+}
+
+#episodio-completo a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#episodio-completo a:hover{
+    color: yellowgreen;
+    background-color: #fff;
+    border-color: yellowgreen;
+    text-decoration: none;
+}
