@@ -10,6 +10,10 @@ body{
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     font-family: "roboto flex";
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .logo{
@@ -103,8 +107,9 @@ body{
     border-radius: 20px;
     color: white;
     border: none;
-    margin: 0 10px;
+    margin: 0 10px 0 10px;
     transition: 0.25s;
+    font-weight: bolder;
 }
 
 .banner-btn:hover{
@@ -112,8 +117,6 @@ body{
     background: white;
     color: #e50914;
     transition: 0.25s;
-    /* transform: rotate(360deg);
-    transform: translateX(5px); */
     transform: scale(105%);
 }
 
@@ -124,6 +127,7 @@ body{
 .filme-titulo{
     font-size: 2em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .carrossel{
@@ -145,7 +149,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     transition: transform 0.5s ease-in-out;
-    justify-content: center;
+    padding: 0px 10% 0px 10%;
+    justify-content: space-evenly;
 }
 
 .carrossel-item{
@@ -166,6 +171,13 @@ body{
     font-size: 15px;
     text-align: center;
     font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 3px;
+}
+
+.carrossel-item h2{
+    color: #009817;
+    font-size: 22px;
     margin-bottom: 5px;
 }
 
@@ -191,6 +203,7 @@ footer{
     background: black;
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
 /* perfis */
@@ -424,4 +437,18 @@ header{
     background-color: #fff;
     border-color: yellowgreen;
     text-decoration: none;
+}
+
+.texto-megatitulo{
+    text-align: center;
+    font-size: 4em;
+    padding-top: 50px;
+}
+
+.texto-megasubtitulo{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
